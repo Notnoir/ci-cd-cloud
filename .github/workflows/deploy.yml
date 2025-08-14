@@ -37,7 +37,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "."
           target: ${{ secrets.EC2_PATH }}
-          rm: true
+          rm: false
 
       - name: Reload Nginx
         uses: appleboy/ssh-action@v1.2.0
