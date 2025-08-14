@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Frontend Public Subnet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <h1>Frontend di AWS VPC</h1>
+  <p id="status">Menghubungi backend...</p>
+  <script>
+    fetch('/api/hello')
+     .then(r => r.json())
+     .then(d => { document.getElementById('status').innerText = d.message; })
+     .catch(e => { document.getElementById('status').innerText = 'Error: ' + e; });
+  </script>
+</body>
+</html>
